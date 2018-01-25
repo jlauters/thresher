@@ -40,7 +40,10 @@ def do_csv(option, opt_str, value, parser):
 
      for th in tech_headlines:
 
-       write.writerow([s.encode('ascii', 'ignore') if type(s) is unicode else s for s in th])
+       row = dict(th)
+       unidict = {k.encode('utf8'): v.encode('utf8') for k, v in row.items()}
+
+       write.writerow(unidict)
 
 def main():
 
