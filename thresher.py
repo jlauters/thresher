@@ -62,8 +62,6 @@ def main():
       user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
 
       session = requests.Session()
-      r = session.get( tech_url )
-
 
       # Get 9 pages worth of stories to ensure 100 tech headlines
       story_count = len(tech_headlines)
